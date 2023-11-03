@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formular Exemplu</title>
+    <style>
+      form {
+        max-width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="procesare_formular.php" method="post">
+      <fieldset>
+        <legend>Your details</legend>
+        <label for="fname"
+          >Name: <input type="text" id="fname" required />
+        </label>
+        <br />
+        <label for="email"
+          >Email: <input type="email" id="email" required />
+        </label>
+        <br />
+        <label for="username"
+          >Username:
+          <input type="text" id="username" required pattern="[a-zA-Z]{6,10}" />
+        </label>
+        <br />
+        <label for="age"
+          >Age: <input type="number" id="age" min="18" max="99" value="21" />
+        </label>
+        <br />
+        <label for="phone"
+          >Phone number:
+          <input
+            type="tel"
+            name="tel"
+            required
+            pattern="^[0-9]{10}$"
+            placeholder="0761250977"
+          />
+        </label>
+        <br />
+        <label for="satisfaction"
+          >Satisfaction:
+          <input type="range" id="satisfaction" min="1" max="5" value="3"
+        /></label>
+      </fieldset>
+    </form>
+    <br />
+    <form action="">
+      <fieldset>
+        <legend>Your review</legend>
+
+        <label for="hear">How did you hear about us?</label>
+        <select id="hear" name="hear" required>
+          <option value="search">Google</option>
+          <option value="social">Social Media</option>
+          <option value="friend">From a Friend</option>
+          <option value="other">Other</option></select
+        ><br />
+
+        <label>Whould you visit again?</label>
+        <label>
+          <input type="radio" name="visit" value="yes" required /> Yes
+        </label>
+        <label> <input type="radio" name="visit" value="no" /> No </label>
+        <label> <input type="radio" name="visit" value="maybe" /> Maybe </label
+        ><br />
+
+        <label for="comments">Comments:</label><br />
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea
+        ><br />
+
+        <label>
+          <input type="checkbox" name="signup" value="yes" /> Sign up for email
+          updates </label
+        ><br />
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
